@@ -9,6 +9,7 @@ const CONTENT_ATTRIBUTE_PATTERNS = [
   /^gen_ai\.tool\.call\.(?:arguments|result)$/,
   /^gen_ai\.(?:system_instructions|tool\.definitions)(?:\.|$)/,
   /^(?:input|output)\.value$/,
+  /^ai\.toolCall\.(?:args|result)(?:\.|$)/,
   /^ai\.prompt(?:\.|$)/,
   /^ai\.response\.(?:text|object|toolCalls|toolResults)(?:\.|$)/,
   /^llm\.(?:input_messages|output_messages|prompts|completions)(?:\.|$)/,

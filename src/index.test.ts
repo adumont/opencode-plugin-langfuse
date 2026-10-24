@@ -107,6 +107,8 @@ describe("LangfusePlugin", () => {
           "gen_ai.system_instructions": "private system prompt",
           "input.value": "private input",
           "output.value": "private output",
+          "ai.toolCall.args": '{"query":"private tool input"}',
+          "ai.toolCall.result": '{"data":"private tool output"}',
           "gen_ai.request.model": "model-name",
           "opencode.client": "opencode",
         },
@@ -121,6 +123,8 @@ describe("LangfusePlugin", () => {
       expect(span.attributes["gen_ai.system_instructions"]).toBe("[REDACTED]");
       expect(span.attributes["input.value"]).toBe("[REDACTED]");
       expect(span.attributes["output.value"]).toBe("[REDACTED]");
+      expect(span.attributes["ai.toolCall.args"]).toBe("[REDACTED]");
+      expect(span.attributes["ai.toolCall.result"]).toBe("[REDACTED]");
       expect(span.attributes["gen_ai.request.model"]).toBe("model-name");
       expect(span.attributes["opencode.client"]).toBe("opencode");
     });
